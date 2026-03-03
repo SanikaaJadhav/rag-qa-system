@@ -3,6 +3,11 @@ import os
 import shutil
 from rag_pipeline import initialize_rag
 
+# Clear stale files on startup
+if os.path.exists("data"):
+    shutil.rmtree("data")
+os.makedirs("data", exist_ok=True)
+
 # ── Page Config ────────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="RAG Document Q&A",
