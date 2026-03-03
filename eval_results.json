@@ -1,0 +1,151 @@
+{
+  "model": "all-MiniLM-L6-v2",
+  "summary": {
+    "precision_at_k": 0.537,
+    "recall_at_k": 0.647,
+    "mrr": 0.712,
+    "avg_latency_ms": 10.3
+  },
+  "per_question": [
+    {
+      "question": "What was Apple's total net sales in 2023?",
+      "precision@k": 0.75,
+      "recall@k": 0.75,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 106.7
+    },
+    {
+      "question": "How much did Apple spend on research and development in 2023?",
+      "precision@k": 0.75,
+      "recall@k": 0.75,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 5.9
+    },
+    {
+      "question": "What was Apple's net income in 2023?",
+      "precision@k": 0.5,
+      "recall@k": 0.667,
+      "reciprocal_rank": 0.25,
+      "latency_ms": 4.9
+    },
+    {
+      "question": "What is Apple's primary business?",
+      "precision@k": 0.75,
+      "recall@k": 0.6,
+      "reciprocal_rank": 0.333,
+      "latency_ms": 4.9
+    },
+    {
+      "question": "Who are Apple's main competitors?",
+      "precision@k": 0.5,
+      "recall@k": 0.667,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 5.6
+    },
+    {
+      "question": "What were Apple's iPhone net sales in 2023?",
+      "precision@k": 0.75,
+      "recall@k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 5.1
+    },
+    {
+      "question": "What was Apple's services revenue in 2023?",
+      "precision@k": 0.5,
+      "recall@k": 0.667,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 5.2
+    },
+    {
+      "question": "How many retail stores does Apple operate?",
+      "precision@k": 0.25,
+      "recall@k": 0.333,
+      "reciprocal_rank": 0.5,
+      "latency_ms": 5.8
+    },
+    {
+      "question": "What was Apple's gross margin in 2023?",
+      "precision@k": 0.5,
+      "recall@k": 0.667,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 5.3
+    },
+    {
+      "question": "What are the main risk factors Apple faces?",
+      "precision@k": 0.75,
+      "recall@k": 0.75,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 5.1
+    },
+    {
+      "question": "What was Apple's cash and cash equivalents at end of 2023?",
+      "precision@k": 0.5,
+      "recall@k": 0.667,
+      "reciprocal_rank": 0.5,
+      "latency_ms": 5.4
+    },
+    {
+      "question": "What was Apple's Mac net sales in 2023?",
+      "precision@k": 0.75,
+      "recall@k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 5.2
+    },
+    {
+      "question": "What was Apple's iPad net sales in 2023?",
+      "precision@k": 0.75,
+      "recall@k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 5.3
+    },
+    {
+      "question": "What was Apple's wearables home and accessories revenue?",
+      "precision@k": 0.75,
+      "recall@k": 1.0,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 5.6
+    },
+    {
+      "question": "Where is Apple headquartered?",
+      "precision@k": 0.5,
+      "recall@k": 0.667,
+      "reciprocal_rank": 0.333,
+      "latency_ms": 5.2
+    },
+    {
+      "question": "What was Apple's Americas revenue in 2023?",
+      "precision@k": 0.0,
+      "recall@k": 0.0,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 4.6
+    },
+    {
+      "question": "What was Apple's Europe revenue in 2023?",
+      "precision@k": 0.25,
+      "recall@k": 0.333,
+      "reciprocal_rank": 0.333,
+      "latency_ms": 4.8
+    },
+    {
+      "question": "What was Apple's Greater China revenue in 2023?",
+      "precision@k": 0.5,
+      "recall@k": 0.667,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 4.9
+    },
+    {
+      "question": "What was Apple's operating income in 2023?",
+      "precision@k": 0.0,
+      "recall@k": 0.0,
+      "reciprocal_rank": 0.0,
+      "latency_ms": 5.3
+    },
+    {
+      "question": "What stock exchanges is Apple listed on?",
+      "precision@k": 0.75,
+      "recall@k": 0.75,
+      "reciprocal_rank": 1.0,
+      "latency_ms": 5.3
+    }
+  ]
+}

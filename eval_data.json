@@ -1,0 +1,102 @@
+[
+  {
+    "question": "What was Apple's total net sales in 2023?",
+    "answer": "383.3 billion",
+    "relevant_keywords": ["383", "net sales", "revenue", "2023"]
+  },
+  {
+    "question": "How much did Apple spend on research and development in 2023?",
+    "answer": "29.9 billion",
+    "relevant_keywords": ["research", "development", "29.9", "R&D"]
+  },
+  {
+    "question": "What was Apple's net income in 2023?",
+    "answer": "96.995 billion",
+    "relevant_keywords": ["net income", "96", "earnings"]
+  },
+  {
+    "question": "What is Apple's primary business?",
+    "answer": "Designs manufactures and markets smartphones personal computers tablets wearables and accessories",
+    "relevant_keywords": ["iPhone", "Mac", "iPad", "products", "services"]
+  },
+  {
+    "question": "Who are Apple's main competitors?",
+    "answer": "Highly competitive markets including smartphone PC tablet and wearables",
+    "relevant_keywords": ["competition", "competitive", "market"]
+  },
+  {
+    "question": "What were Apple's iPhone net sales in 2023?",
+    "answer": "200.6 billion",
+    "relevant_keywords": ["iPhone", "200", "net sales"]
+  },
+  {
+    "question": "What was Apple's services revenue in 2023?",
+    "answer": "85.2 billion",
+    "relevant_keywords": ["services", "85", "revenue"]
+  },
+  {
+    "question": "How many retail stores does Apple operate?",
+    "answer": "retail stores worldwide",
+    "relevant_keywords": ["retail", "stores", "worldwide"]
+  },
+  {
+    "question": "What was Apple's gross margin in 2023?",
+    "answer": "44.1 percent",
+    "relevant_keywords": ["gross margin", "44", "percent"]
+  },
+  {
+    "question": "What are the main risk factors Apple faces?",
+    "answer": "global economic conditions competition supply chain concentration of revenue",
+    "relevant_keywords": ["risk", "factors", "competition", "supply"]
+  },
+  {
+    "question": "What was Apple's cash and cash equivalents at end of 2023?",
+    "answer": "29.9 billion cash",
+    "relevant_keywords": ["cash", "equivalents", "liquidity"]
+  },
+  {
+    "question": "What was Apple's Mac net sales in 2023?",
+    "answer": "29.4 billion",
+    "relevant_keywords": ["Mac", "29", "net sales"]
+  },
+  {
+    "question": "What was Apple's iPad net sales in 2023?",
+    "answer": "28.3 billion",
+    "relevant_keywords": ["iPad", "28", "net sales"]
+  },
+  {
+    "question": "What was Apple's wearables home and accessories revenue?",
+    "answer": "39.8 billion",
+    "relevant_keywords": ["wearables", "accessories", "39"]
+  },
+  {
+    "question": "Where is Apple headquartered?",
+    "answer": "Cupertino California",
+    "relevant_keywords": ["Cupertino", "California", "headquartered"]
+  },
+  {
+    "question": "What was Apple's Americas revenue in 2023?",
+    "answer": "162.1 billion",
+    "relevant_keywords": ["Americas", "162", "revenue"]
+  },
+  {
+    "question": "What was Apple's Europe revenue in 2023?",
+    "answer": "94.3 billion",
+    "relevant_keywords": ["Europe", "94", "revenue"]
+  },
+  {
+    "question": "What was Apple's Greater China revenue in 2023?",
+    "answer": "72.6 billion",
+    "relevant_keywords": ["China", "72", "revenue"]
+  },
+  {
+    "question": "What was Apple's operating income in 2023?",
+    "answer": "114.3 billion",
+    "relevant_keywords": ["operating income", "114", "earnings"]
+  },
+  {
+    "question": "What stock exchanges is Apple listed on?",
+    "answer": "NASDAQ",
+    "relevant_keywords": ["NASDAQ", "stock", "listed", "exchange"]
+  }
+]

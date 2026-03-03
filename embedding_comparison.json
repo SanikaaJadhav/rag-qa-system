@@ -1,0 +1,22 @@
+[
+  {
+    "model": "all-MiniLM-L6-v2",
+    "vector_dimension": 384,
+    "index_build_time_s": 3.17,
+    "num_chunks": 424,
+    "precision_at_k": 0.537,
+    "recall_at_k": 0.647,
+    "mrr": 0.713,
+    "avg_latency_ms": 5.8
+  },
+  {
+    "model": "all-mpnet-base-v2",
+    "vector_dimension": 768,
+    "index_build_time_s": 19.53,
+    "num_chunks": 424,
+    "precision_at_k": 0.562,
+    "recall_at_k": 0.692,
+    "mrr": 0.817,
+    "avg_latency_ms": 31.5
+  }
+]

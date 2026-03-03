@@ -104,13 +104,13 @@ def build_vector_store(chunks):
     return vector_store
 
 
-def load_vector_store():
+def load_vector_store(index_dir="faiss_index"):
     embeddings = HuggingFaceEmbeddings(
         model_name="sentence-transformers/all-MiniLM-L6-v2",
         model_kwargs={"device": "cpu"}
     )
     vector_store = FAISS.load_local(
-        "faiss_index",
+        index_dir,
         embeddings,
         allow_dangerous_deserialization=True
     )
@@ -119,7 +119,7 @@ def load_vector_store():
 
 
 # ── QA Chain ───────────────────────────────────────────────────────────────────
-def build_qa_chain(vector_store):
+def build_qa_chain(vector_store, similarity_threshold=0.0):
     llm = GroqLLM(api_key=GROQ_API_KEY)
 
     prompt = PromptTemplate.from_template("""
@@ -139,37 +139,46 @@ Answer:""")
     )
 
     def format_docs(docs):
+        if not docs:
+            return ""
         return "\n\n".join([
             f"[Source: {doc.metadata.get('source', 'unknown')}]\n{doc.page_content}"
             for doc in docs
         ])
 
-    chain = (
-        {
-            "context": retriever | format_docs,
-            "question": RunnablePassthrough()
-        }
-        | prompt
-        | llm
-        | StrOutputParser()
-    )
+    def is_relevant(docs, question):
+        if not docs:
+            return False
+        stop_words = {"what","was","is","the","a","an","of","in","did","how","who","where","when","are","does","do"}
+        question_words = set(question.lower().split()) - stop_words
+        combined = " ".join([d.page_content.lower() for d in docs])
+        overlap = sum(1 for w in question_words if w in combined)
+        return overlap >= 1
 
-    print("✅ QA chain ready")
-    return chain, retriever
+    class HallucinationSafeChain:
+        def invoke(self, question):
+            docs = retriever.invoke(question)
+            if not is_relevant(docs, question):
+                return "⚠️ Insufficient context found in documents to answer this question reliably."
+            context = format_docs(docs)
+            formatted_prompt = prompt.format(context=context, question=question)
+            return llm._call(formatted_prompt)
 
-
+    safe_chain = HallucinationSafeChain()
+    print("✅ QA chain ready with hallucination mitigation")
+    return safe_chain, retriever
 # ── Entry Point ────────────────────────────────────────────────────────────────
-def initialize_rag(force_rebuild=False):
-    if os.path.exists("faiss_index") and not force_rebuild:
+def initialize_rag(force_rebuild=False, data_dir="data", index_dir="faiss_index", similarity_threshold=0.75):
+    if os.path.exists(index_dir) and not force_rebuild:
         print("📂 Found existing FAISS index, loading...")
-        vector_store = load_vector_store()
+        vector_store = load_vector_store(index_dir)
     else:
         print("📄 No index found, processing PDFs...")
-        documents = load_pdfs("data")
+        documents = load_pdfs(data_dir)
         if not documents:
-            raise ValueError("❌ No PDFs found in /data folder!")
+            raise ValueError("❌ No PDFs found!")
         chunks = chunk_documents(documents)
-        vector_store = build_vector_store(chunks)
+        vector_store = build_vector_store(chunks, index_dir)
 
-    chain, retriever = build_qa_chain(vector_store)
+    chain, retriever = build_qa_chain(vector_store, similarity_threshold=0.0)
     return chain, retriever
